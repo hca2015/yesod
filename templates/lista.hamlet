@@ -1,0 +1,24 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            
+            <th>
+                Preco 
+            
+            <th>
+                QtEstoque
+    
+    <tbody>
+        $forall (Entity pid produto) <- produtos
+            <tr>
+                <td>
+                    <a href=@{InfoR pid}> 
+                        #{produtoNome produto}
+            
+                <td>
+                    #{produtoPreco produto}
+                
+                <td>
+                    #{produtoQtEstoque produto}
