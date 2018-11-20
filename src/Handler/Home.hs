@@ -11,6 +11,9 @@ import Text.Julius
 import Import
 import Prelude
 
+widgetHead :: Widget
+widgetHead = $(whamletFile "templates/head.hamlet")
+
 widgetFooter :: Widget
 widgetFooter = $(whamletFile "templates/footer.hamlet")
 
@@ -19,7 +22,7 @@ getHomeR = do
     mensagem <- getMessage
     logado <- lookupSession "_USR"
     defaultLayout $ do 
-        addStylesheet $ StaticR css_bootstrap_css
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         toWidgetHead $(juliusFile "templates/home.julius")
         toWidget $(luciusFile "templates/home.lucius")
         $(whamletFile "templates/home.hamlet")

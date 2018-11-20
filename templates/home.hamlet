@@ -1,37 +1,51 @@
-$maybe msg <- mensagem
-    <div class="alert alert-success">
-        #{msg}
-        
-<div class="container">
-    <nav class="nav navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a href=@{ProdutoR}>
-                    Cadastro de Produto
-            <li class="nav-item">
-                <a href=@{ListaProdutoR}>
-                    Listagem de Produto
-            
-            <li class="nav-item">
-                <a href=@{UsuarioR}>
-                    Cadastre-se
-            $maybe _ <- logado
-                <li class="nav-item">
-                    <form action=@{LogoutR} method=post>
-                        <input type="submit" value="Logout">
-            $nothing
-                <li class="nav-item">
-                    <a href=@{LoginR}>
-                        Login
-                    
-    <div class="jumbotron">
-        <h1>
-            _{MsgWelcome}
-        
-        <img src=@{StaticR imgs_pudim_jpg}>
+<head>
+    ^{widgetHead}    
 
-        <button onclick="teste()" class="btn btn-primary">
-            _{MsgTest}
+
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
         
+        <span class="navbar-brand">RPG Story
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href=@{HomeR}>
+                        Página Inicial
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=""}>
+                        Histórias
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Mais sobre o site
+                
+            $maybe _ <- logado
+                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post" style="margin-right:10px;">
+                    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+            $nothing
+                <form class="form-inline my-2 my-lg-0" action=@{UsuarioR} method="get" id="signin" style="margin-right:10px;">
+                    <button class="btn btn-outline-success" type="submit">Cadatre-se
+                        
+                <form class="form-inline my-2 my-lg-0" action=@{LoginR} method="get">
+                    <button class="btn btn-outline-secondary" type="submit">Login
+                    
+                
+<div class="jumbotron">
+    $maybe msg <- mensagem
+        <div class="alert alert-success">
+            #{msg}
+    
+    <h1>
+        _{MsgWelcome}
+
+    <button onclick="teste()" class="btn btn-primary">
+        _{MsgTest}
+        
+
 <footer>
     ^{widgetFooter}

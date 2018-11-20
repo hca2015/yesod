@@ -24,7 +24,7 @@ getUsuarioR = do
     (widgetForm, enctype) <- generateFormPost formUsuario
     mensagem <- getMessage
     defaultLayout $ do 
-        addStylesheet $ StaticR css_bootstrap_css
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         $(whamletFile "templates/usuario.hamlet")
     
 postUsuarioR :: Handler Html 

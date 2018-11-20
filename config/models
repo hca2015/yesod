@@ -1,13 +1,34 @@
-Produto json
-    nome      Text
-    preco     Double
-    qtEstoque Int
-    deriving Show
+Autor 
+    usuarioid       UsuarioId
+    rating          Text
+    qtTextos        Int
+    descricao       Text
+    deriving Show Read
+    
+Leitor
+    usuarioid   UsuarioId
+    autorid     AutorId
+    deriving Show Read
+    
+Texto
+    texto       Text
+    ocorrencia  Day
+    imagepath   Text
+    deriving Show Read
+    
+TextoAutor
+    textoid     TextoId
+    autorid     AutorId
+    deriving Show Read
     
 Usuario
     nome        Text
     email       Text
     senha       Text
+    deriving Show Read
+    
+Produto json
+    nome      Text
+    preco     Double
+    qtEstoque Int
     deriving Show
-    
-    

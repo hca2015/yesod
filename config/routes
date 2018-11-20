@@ -11,5 +11,10 @@
 
 /usuario                    UsuarioR       GET POST
 
+/admin                      AdminR         GET
+/admin/#UsuarioId/apagar    ApagarR        POST
+
+/arquivo                    ArquivoR       GET POST
+
 /login                      LoginR         GET POST
 /logout                     LogoutR        POST
