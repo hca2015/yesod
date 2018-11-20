@@ -18,3 +18,6 @@
 
 /login                      LoginR         GET POST
 /logout                     LogoutR        POST
+
+/more                       MoreR          GET
+/historia                   HistoriaR      GET

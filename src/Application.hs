@@ -43,6 +43,8 @@ import Handler.Usuario
 import Handler.Login
 import Handler.Admin
 import Handler.Arquivo
+import Handler.More
+import Handler.Historia
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the

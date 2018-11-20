@@ -1,7 +1,3 @@
-<head>
-    ^{widgetHead}    
-
-
 <div class="navbar-wrapper">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
         
@@ -17,22 +13,22 @@
                         Página Inicial
                 
                 <li class="nav-item">
-                    <a class="nav-link" href=""}>
+                    <a class="nav-link" href=@{HistoriaR}>
                         Histórias
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href=@{MoreR}>
                         Mais sobre o site
                 
             $maybe _ <- logado
                 <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post" style="margin-right:10px;">
-                    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+                    <button class="btn btn-sm btn-outline-danger" type="submit">Logout
             $nothing
                 <form class="form-inline my-2 my-lg-0" action=@{UsuarioR} method="get" id="signin" style="margin-right:10px;">
                     <button class="btn btn-outline-success" type="submit">Cadatre-se
                         
                 <form class="form-inline my-2 my-lg-0" action=@{LoginR} method="get">
-                    <button class="btn btn-outline-secondary" type="submit">Login
+                    <button class="btn btn-outline-primary" type="submit">Login
                     
                 
 <div class="jumbotron">

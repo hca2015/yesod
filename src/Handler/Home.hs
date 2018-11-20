@@ -11,9 +11,6 @@ import Text.Julius
 import Import
 import Prelude
 
-widgetHead :: Widget
-widgetHead = $(whamletFile "templates/head.hamlet")
-
 widgetFooter :: Widget
 widgetFooter = $(whamletFile "templates/footer.hamlet")
 
