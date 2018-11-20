@@ -32,15 +32,25 @@
                     
                 
 <div class="jumbotron">
-    $maybe msg <- mensagem
-        <div class="alert alert-success">
-            #{msg}
-    
-    <h1>
-        _{MsgWelcome}
-
-    <button onclick="teste()" class="btn btn-primary">
-        _{MsgTest}
+    <div class="conteiner">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p>
+                    Os anjos cantavam as glórias das guerras e entoavam o lamento pelos mortos, seus criadores. A ascensão e a queda de todas as civilizações eram sempre ligadas à religião: assim sendo, Goldstein, do pó vieste e ao pó retornarás.
+                <p>
+                    Há uma trama que liga todos os seres: seu nome é Destino. Um grupo de aventureiros, ignorante acerca dos caminhos da realidade, descobrirá protagonizar essa complexa história.
+                <p>
+                    Há, contudo, aquele que se recusa a seguir os caminhos estabelecidos no início dos tempos: seu nome é Inúlvain. Seu objetivo é simples – tudo o que ele anseia é se tornar um Deus e modificar os pilares da existência.
+                <p>
+                    Essa é lenda de heróis que se recusaram a baixar a cabeça perante os deuses e os demônios. Eles são os Cinco de Goldstein – guerreiros das terras gélidas do Norte. Seus feitos viverão para sempre nas lendas dos skalds, sua edda permanecerá pela eternidade na memória do povo. Siga-os em direção ao confronto do fim dos dias, quando a Guerra das Lágrimas finalmente se encerrará. 
+                    
+                <p>
+                    <b>Pelos Cinco! Pelo rei! Por Goldstein!</b>
+                    
+                <p style="float: right;">
+                    <i>--coolmemes1997</i>
+                    
+                <img style="max-width:100%; width:auto; heigth:auto;" src="/static/imgs/goldstein.jpg">
         
 
 <footer>
