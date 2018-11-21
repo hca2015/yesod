@@ -20,4 +20,7 @@
 /logout                     LogoutR        POST
 
 /more                       MoreR          GET
-/historia                   HistoriaR      GET
+
+/produto                    HistoriaR       GET POST
+/produto/#HistoriaId/info   InfoHR          GET
+/listagem                   ListaHistoriaR  GET

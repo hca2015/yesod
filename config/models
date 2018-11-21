@@ -5,12 +5,8 @@ Autor
     descricao       Text
     deriving Show Read
     
-Leitor
-    usuarioid   UsuarioId
-    autorid     AutorId
-    deriving Show Read
-    
 Texto
+    titulo      Text
     texto       Text
     ocorrencia  Day
     imagepath   Text

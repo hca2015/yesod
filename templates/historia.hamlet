@@ -1,2 +1,23 @@
-<h1>
-    Histórias
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            
+            <th>
+                Preco 
+            
+            <th>
+                QtEstoque
+    
+    <tbody>
+        $forall (Entity pid produto) <- produtos
+            <tr>
+                <td>
+                    #{produtoNome produto}
+            
+                <td>
+                    #{produtoPreco produto}
+                
+                <td>
+                    #{produtoQtEstoque produto}
