@@ -5,22 +5,26 @@
 
 /     HomeR  GET
 
-/produto                    ProdutoR       GET POST
-/produto/#ProdutoId/info    InfoR          GET
-/listagem                   ListaProdutoR  GET
+/login                      LoginR              GET POST
+/logout                     LogoutR             POST
 
-/usuario                    UsuarioR       GET POST
+/player                     PlayerR             GET POST
 
-/admin                      AdminR         GET
-/admin/#UsuarioId/apagar    ApagarR        POST
+/admin                      AdminR              GET
+/admin/#PlayerId/apagar     ApagarR             POST
 
-/arquivo                    ArquivoR       GET POST
+/sugestao                   PainelR             GET
+/sugestao/#PlayerId         SugestaoR           GET POST
+/sugestoes/all              SugestoesAllR       GET
+!/sugestoes/#PlayerId       SugestoesPlayerR    GET
 
-/login                      LoginR         GET POST
-/logout                     LogoutR        POST
+/atributos/all              AtributosR          GET
+/atributos/bonus            BonusR              GET
+/atributos/especialista     EspecialistaR       GET
+/atributos/ofensivo         OfensivoR           GET
+/atributos/suporte          SuporteR            GET
+/atributos/tanque           TanqueR             GET
 
-/more                       MoreR          GET
+/racas                      RacasR              GET
 
-/produto                    HistoriaR       GET POST
-/produto/#HistoriaId/info   InfoHR          GET
-/listagem                   ListaHistoriaR  GET
+/classes                    ClassesR            GET

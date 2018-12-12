@@ -1,30 +1,29 @@
-Autor 
-    usuarioid       UsuarioId
-    rating          Text
-    qtTextos        Int
-    descricao       Text
-    deriving Show Read
-    
-Texto
-    titulo      Text
-    texto       Text
-    ocorrencia  Day
-    imagepath   Text
-    deriving Show Read
-    
-TextoAutor
-    textoid     TextoId
-    autorid     AutorId
-    deriving Show Read
-    
-Usuario
+Player
     nome        Text
     email       Text
     senha       Text
+    UniquePlayer   email
     deriving Show Read
+
+Racas json
+    nome        Text
+    historia    Text
+    descricao   Text
+    atributos   Text
+    deriving Show
+
+Classes json
+    nome        Text
+    historia    Text
+    descricao   Text
+    atributos   Text
+    deriving Show
     
-Produto json
-    nome      Text
-    preco     Double
-    qtEstoque Int
+Sugestao json
+    plaid       PlayerId
+    nome        Text
+    tipo        Text
+    descricao   Textarea
+    historia    Textarea
+    atributos   Text
     deriving Show
