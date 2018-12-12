@@ -1,0 +1,7 @@
+.masthead { 
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url("static/imgs/taberna.jpg");
+  background-position: center center;
+  background-size: cover;
+}
