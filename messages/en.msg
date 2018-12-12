@@ -1,3 +1,3 @@
-Welcome: Welcome to my website.
+Welcome: Welcome to A Taverna Gamble.
 Test: Test
 Send: Send
