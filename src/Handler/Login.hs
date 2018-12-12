@@ -9,6 +9,10 @@ module Handler.Login where
 import Text.Lucius
 import Text.Julius
 import Import
+import Database.Persist.Sql
+
+widgetBootstrapLinks :: Widget
+widgetBootstrapLinks = $(whamletFile "templates/bootstrapLinks.hamlet")
 
 formLogin :: Form (Text,Text)
 formLogin = renderBootstrap $ (,) 
@@ -20,36 +24,39 @@ getLoginR = do
     (widgetForm, enctype) <- generateFormPost formLogin
     mensagem <- getMessage
     defaultLayout $ do 
-        addStylesheet $ StaticR css_bootstrap_css
+        setTitle "Login"
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        toWidget $(luciusFile "templates/login.lucius")
         $(whamletFile "templates/login.hamlet")
     
 postLoginR :: Handler Html 
 postLoginR = do 
     ((res,_),_) <- runFormPost formLogin
     case res of 
-        FormSuccess ("admin@admin.com","admin123") -> do 
-            setSession "_USR" (pack $ show $ Usuario "admin" "admin@admin.com" "")
+        FormSuccess ("admin@admin.com", "admin123") -> do
+            setSession "_ADM" (pack $ show $ Player "admin" "admin@admin.com" "")
             redirect AdminR
         FormSuccess (email,senha) -> do
-            logado <- runDB $ selectFirst [UsuarioEmail ==. email,
-                                          UsuarioSenha ==. senha] []
+            logado <- runDB $ selectFirst [PlayerEmail ==. email,
+                                           PlayerSenha ==. senha] []
             case logado of
-                Just (Entity usrid usuario) -> do 
-                    setSession "_USR" (pack $ show usuario)
+                Just (Entity plaid player) -> do 
+                    setSession "_PLA" (pack $ show player)
                     setMessage [shamlet|
                         <h1>
-                            Usuario logado
+                            Player logado
                     |]
                     redirect HomeR
                 Nothing -> do 
                     setMessage [shamlet|
                         <h1>
-                            Usuario e senha n encontrados!
+                            Player e senha não encontrados!
                     |]
                     redirect LoginR
         _ -> redirect LoginR
         
 postLogoutR :: Handler Html
 postLogoutR = do 
-    deleteSession "_USR"
+    deleteSession "_ADM"
+    deleteSession "_PLA"
     redirect HomeR

@@ -9,16 +9,17 @@ module Handler.Home where
 import Text.Lucius
 import Text.Julius
 import Import
-import Prelude
 
-widgetFooter :: Widget
-widgetFooter = $(whamletFile "templates/footer.hamlet")
+widgetBootstrapLinks :: Widget
+widgetBootstrapLinks = $(whamletFile "templates/bootstrapLinks.hamlet")
 
 getHomeR :: Handler Html
 getHomeR = do 
     mensagem <- getMessage
-    logado <- lookupSession "_USR"
+    admin <- lookupSession "_ADM"
+    logado <- lookupSession "_PLA"
     defaultLayout $ do 
+        setTitle "Página Inicial"
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         toWidgetHead $(juliusFile "templates/home.julius")
         toWidget $(luciusFile "templates/home.lucius")

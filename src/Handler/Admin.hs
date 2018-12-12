@@ -11,14 +11,19 @@ import Text.Lucius
 import Text.Julius
 import Database.Persist.Sql
 
+widgetBootstrapLinks :: Widget
+widgetBootstrapLinks = $(whamletFile "templates/bootstrapLinks.hamlet")
+
 getAdminR :: Handler Html   
 getAdminR = do 
-    usuarios <- runDB $ selectList [] [Asc UsuarioNome]
+    players <- runDB $ selectList [] [Asc PlayerNome]
     defaultLayout $ do 
-        addStylesheet $ StaticR css_bootstrap_css
+        setTitle "Painel Admin"
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        toWidget $(luciusFile "templates/admin.lucius")
         $(whamletFile "templates/admin.hamlet")
 
-postApagarR :: UsuarioId -> Handler Html
-postApagarR usrid = do 
-    runDB $ delete usrid
+postApagarR :: PlayerId -> Handler Html
+postApagarR plaid = do 
+    runDB $ deleteCascade plaid
     redirect AdminR
