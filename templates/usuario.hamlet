@@ -1,8 +1,0 @@
-$maybe msg <- mensagem 
-    <div class="alert alert-danger">
-        #{msg}
-
-<form action=@{UsuarioR} method=post enctype=#{enctype}>
-    ^{widgetForm}
-    <input type="submit" value=_{MsgSend}>
-    
