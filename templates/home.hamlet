@@ -56,10 +56,34 @@
     <div class="alert alert-success">
       #{msg}
 
-  <h1>
+  <h1 align="center">
     _{MsgWelcome}
- 
-  <button onclick="teste()" class="btn btn-primary">
-    _{MsgTest}
+    
+    <hr>
+    
+    <h2>
+        Últimas notícias!
+    <hr width="50%">
+        
+    <div class="noticias">
+        <p>Adicionado as novas <a href=@{RacasR}>raças</a> e classes (separados pelo seu tipo), com seus atributos e uma breve história sobre cada raça. Confira agora mesmo!</p>
+        <a href=@{AtributosR}>Todos Atributos</a><br>
+        <a href=@{BonusR}>Bônus de Atributos por Raça</a><br>
+        <a href=@{EspecialistaR}>Classe Especialista</a><br>
+        <a href=@{OfensivoR}>Classe Ofensivo</a><br>
+        <a href=@{SuporteR}>Classe Suporte</a><br>
+        <a href=@{TanqueR}>Classe Tanque</a>
+        
+    <hr width="50%">
+        
+    <div class="noticias">
+        <p>Não deixe de fazer o seu <a href=@{PlayerR}>cadastro</a> e fique sempre ligado nas nossas atualizações e novidades. Se tiver alguma sugestão, <a href=@{PainelR}>clique aqui</a> e conte para nós!</p>
+    
+    <hr width="50%">
+    
+    <div class="noticias">
+        <p>Estamos trabalhando na disposição dos atributos de cada raça em cada uma das classes, para que vocês possam assim ver quem se encaixa melhor em cada raça.</p>
+        <p>Começamos a criar as listas de armaduras e armas em geral. Nosso sistema contará com um esquema de armaduras mais completo, onde o seu set será composto por elmo, peitoral, calça e bota, além de uma arma de uma mão mais um escudo ou arma de duas mãos.</p>
+        <p>Fiquem ligados pois tem muita novidade chegando!</p>
 
 ^{widgetBootstrapLinks}
