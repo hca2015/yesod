@@ -52,14 +52,50 @@
                     <button class="btn btn-outline-secondary" type="submit">Login
                     
 <div class="jumbotron">
-  $maybe msg <- mensagem
-    <div class="alert alert-success">
-      #{msg}
-
-  <h1>
-    _{MsgWelcome}
- 
-  <button onclick="teste()" class="btn btn-primary">
-    _{MsgTest}
+    <table border="1">
+        <tr>
+            <th>Classes
+    
+    
+        <tr>
+            <th>Suporte/Evolução
+            <th>Tanque/Evolução
+            <th>Ofensivo/Evolução
+            <th>Especialista/Evolução
+    
+    
+        <tr>
+            <td>Clérigo/Profeta
+            <td>Escudeiro/Guardião
+            <td>Assassino/Sicário
+            <td>Mago/Arquimago
+    
+    
+        <tr>
+            <td>Ocultista/Xamã
+            <td>Cavaleiro/Paladino
+            <td>Executor/Ceifador
+            <td>Patrulheiro/Caçador
+    
+    
+        <tr>
+            <td>Bardo/Menestrel
+            <td>Brutamontes/Bárbaro
+            <td>Combatente/Gladiador
+            <td>Apostador/Vigarista
+    
+    
+        <tr>
+            <td>
+            <td>
+            <td>
+            <td>Mimico
+    
+    
+        <tr>
+            <td>
+            <td>
+            <td>
+            <td>Inventor/Alquimista
 
 ^{widgetBootstrapLinks}

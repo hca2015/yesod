@@ -35,31 +35,22 @@
                     <a class="nav-link" href=@{PainelR}>
                         Sugestões
                         
-            $maybe _ <- admin
-                <form class="form-inline my-2 my-lg-0" action=@{AdminR} id="painel_adm" method="get">
-                    <button class="btn btn-sm btn-outline-danger" type="submit">Painel do Admin
-                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
-                    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
-            $nothing
-              $maybe _ <- logado
-                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
-                  <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
-              $nothing
-                <form class="form-inline my-2 my-lg-0" action=@{PlayerR} method="get" id="signin">
-                    <button class="btn btn-outline-success" type="submit">Cadatre-se
-                         
-                <form class="form-inline my-2 my-lg-0" action=@{LoginR} method="get">
-                    <button class="btn btn-outline-secondary" type="submit">Login
-                    
-<div class="jumbotron">
-  $maybe msg <- mensagem
-    <div class="alert alert-success">
-      #{msg}
+            <form class="form-inline my-2 my-lg-0" action=@{AdminR} id="painel_adm" method="get">
+                <button class="btn btn-sm btn-outline-danger" type="submit">Painel do Admin
+            <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
 
-  <h1>
-    _{MsgWelcome}
- 
-  <button onclick="teste()" class="btn btn-primary">
-    _{MsgTest}
+<div class="jumbotron">
+  <div class="card text-center">
+      <div class="card-header">
+          Sugestões
+      <div class="card-body">
+          <h5 class="card-title">
+              Listar todas as Sugestões
+          <p class="card-text">
+              Vizualizar todas as sugestões enviadas pelos Usuários
+          <a href=@{SugestoesAllR} class="btn btn-primary">
+              Ir para Todas Sugestões
+      <div class="card-footer text-muted">
 
 ^{widgetBootstrapLinks}

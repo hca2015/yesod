@@ -35,31 +35,41 @@
                     <a class="nav-link" href=@{PainelR}>
                         Sugestões
                         
-            $maybe _ <- admin
-                <form class="form-inline my-2 my-lg-0" action=@{AdminR} id="painel_adm" method="get">
-                    <button class="btn btn-sm btn-outline-danger" type="submit">Painel do Admin
-                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
-                    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+            $maybe _ <- logado
+              <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
             $nothing
-              $maybe _ <- logado
-                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
-                  <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
-              $nothing
-                <form class="form-inline my-2 my-lg-0" action=@{PlayerR} method="get" id="signin">
-                    <button class="btn btn-outline-success" type="submit">Cadatre-se
-                         
-                <form class="form-inline my-2 my-lg-0" action=@{LoginR} method="get">
-                    <button class="btn btn-outline-secondary" type="submit">Login
-                    
+              <form class="form-inline my-2 my-lg-0" action=@{AdminR} id="painel_adm" method="get">
+                <button class="btn btn-sm btn-outline-danger" type="submit">Painel do Admin
+              <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+                
 <div class="jumbotron">
-  $maybe msg <- mensagem
-    <div class="alert alert-success">
-      #{msg}
-
-  <h1>
-    _{MsgWelcome}
- 
-  <button onclick="teste()" class="btn btn-primary">
-    _{MsgTest}
+    <table class="table">
+       <thead>
+            <tr>
+                <th>
+                    NOME
+                <th>
+                    TIPO
+                <th>
+                    DESCRIÇÃO
+                <th>
+                    HISTÓRIA
+                <th>
+                    ATRIBUTOS
+        <tbody>
+            $forall (Entity sid sugestao) <- sugestoes
+                <tr>
+                    <td>
+                        #{sugestaoNome sugestao}
+                    <td>
+                        #{sugestaoTipo sugestao}
+                    <td>
+                        #{sugestaoDescricao sugestao}
+                    <td>
+                        #{sugestaoHistoria sugestao}
+                    <td>
+                        #{sugestaoAtributos sugestao}
 
 ^{widgetBootstrapLinks}

@@ -52,14 +52,59 @@
                     <button class="btn btn-outline-secondary" type="submit">Login
                     
 <div class="jumbotron">
-  $maybe msg <- mensagem
-    <div class="alert alert-success">
-      #{msg}
+    <table border="1">
+        <tr>
+            <th>Atributos
+            <th>Descrição
 
-  <h1>
-    _{MsgWelcome}
- 
-  <button onclick="teste()" class="btn btn-primary">
-    _{MsgTest}
 
+        <tr>
+            <th>Aura
+            <td>Quantifica o nível de poder mágico.
+
+
+        <tr>
+            <th>Carisma
+            <td>Quantifica a capacidade de socializar e de dobrar outros seres através de expressões.
+
+
+        <tr>
+            <th>Constituição
+            <td>Quantifica sua resistênia corporal tanto de forma Externa como interna.
+
+
+        <tr>
+            <th>Destreza
+            <td>Quantifica suas habilidades de precisão, assim como sua agilidade e equilíbrio.
+
+
+        <tr>
+            <th>Fé
+            <td>Quantifica o seu grau de devoção ao seu Deus e a sua religião.
+
+
+        <tr>
+            <th>Foco
+            <td>Quantifica a maestria com armas de precisão e o quão precisos são os ataques à distância.
+
+
+        <tr>
+            <th>Força
+            <td>Quantifica o peso que pode ser carregado e o poder de seus ataques físicos.
+
+
+        <tr>
+            <th>Inteligência
+            <td>Quantifica a racionalidade e a bagagem intelectual de conhecimentos científicos.
+
+
+        <tr>
+            <th>Percepção
+            <td>Quantifica a sagacidade em utilizar métodos e conhecimentos de senso-comum.
+
+
+        <tr>
+            <th>Sorte
+            <td>Quantifica a probabilidade de ser beneficiado pelo acaso.
+            
 ^{widgetBootstrapLinks}

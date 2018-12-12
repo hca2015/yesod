@@ -1,0 +1,155 @@
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        
+        <span class="navbar-brand">A Taverna Gamble
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href=@{HomeR}>
+                        Página Inicial
+                        
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Atributos
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href=@{AtributosR}>Todos Atributos 
+                        <a class="dropdown-item" href=@{BonusR}>Bônus de Atributos por Raça
+                        <a class="dropdown-item" href=@{EspecialistaR}>Classe Especialista
+                        <a class="dropdown-item" href=@{OfensivoR}>Classe Ofensivo
+                        <a class="dropdown-item" href=@{SuporteR}>Classe Suporte
+                        <a class="dropdown-item" href=@{TanqueR}>Classe Tanque
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=@{RacasR}>
+                        Raças
+                        
+                <li class="nav-item">
+                    <a class="nav-link" href=@{ClassesR}>
+                        Classes
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=@{PainelR}>
+                        Sugestões
+                        
+            $maybe _ <- admin
+                <form class="form-inline my-2 my-lg-0" action=@{AdminR} id="painel_adm" method="get">
+                    <button class="btn btn-sm btn-outline-danger" type="submit">Painel do Admin
+                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+            $nothing
+              $maybe _ <- logado
+                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                  <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+              $nothing
+                <form class="form-inline my-2 my-lg-0" action=@{PlayerR} method="get" id="signin">
+                    <button class="btn btn-outline-success" type="submit">Cadatre-se
+                         
+                <form class="form-inline my-2 my-lg-0" action=@{LoginR} method="get">
+                    <button class="btn btn-outline-secondary" type="submit">Login
+                    
+<div class="jumbotron">
+    <table border="1">
+        <tr>
+            <th>Raça
+            <th>História
+        
+        
+        <tr>
+            <th>Anão
+            <td>Costumam viver em montanhas ou colinas, normalmente são barbudos e tem até 1,5 metros de altura. São robustos e em batalha preferem martelos e machados. Costumam ser muito rabugentos mas apesar de ser dificil conquistar a sua amizade, estes pequenos mestres da forja são extremamente leais e protetores matando e morrendo por aqueles que amam e respeitam. A civilização anã não costuma se relacionar bem com a civilização élfica, pois há uma rivalidade tão antiga que eles nem mesmo se recordam qual a razão.
+            
+        
+        <tr>
+            <th>Atlantianos
+            <td>Fruto de experiências científicas dos humanos, relacionadas à quimeras, os atlantianos aparentam ser humanos comuns porém possuem habilidades aquáticas super desenvolvidas retiradas genéticamente dos peixes e potencializadas em laboratório. São fisica e intelectualmente superiores aos humanos que ao criá-los temeram seus poder e os perseguiram. Como a população atlantiana ainda era pequena, as poucas dezenas existentes fugiram e migraram para os oceanos, se reproduzindo, produzindo tecnologia e planejando a vingança contra os seres da superfície.
+            
+        
+        <tr>
+            <th>Aves de Rapina (Quimeras)
+            <td>Esse grupo de quimeras vive em um reino no topo da montanha denominada Palácio de Jade pois desejam se manter acima das outras raças por se sentirem superiores graças a sua capacidade de vôo e destreza e também por se considerarem mais civilizados que as outras raças ja que, apesar da discriminação por serem quimeras, ele são, em geral, pacíficos e diplomatas. Quando escravos eram mensageiros e vigias.
+            
+        
+        <tr>
+            <th>Draconata
+            <td>Híbrdos de humanos e dragões. Comumente concebidos quando um dragão assume a forma de um homem humano e seduz aquela que será a mãe do draconato, ao nascer tem a aparência de uma criança humana comum, porém ao atingir a puberdade suas características draconianas começam a aparecer, quanto mais poderoso o draconato, mais semelhante ele será a um dragão e suas habilidades derivam das habilidades de seu pai. Um draconato poderoso pode suprimir as suas características draconianas, passando, quase sempre, despercebidos numa multidão de humanos. sua longevidade é muito maior que a de um humano comum, podendo viver até 500 anos.
+            
+        
+        <tr>
+            <th>Elfo
+            <td>Os elfos são uma espécie humanóide considerada extremamente bela e sábia, costumam ter orelhas pontiagúdas e tem uma estatura media entre 1,70m e 1,75m. Costumam ser magros e ótimos com armas que envolvam precisão, como facas de arremesso e arcos. Eles tem uma profunda ligação com a natureza e com a vida, sendo que a maioria escolhe não comer carne. Por este motivo é comum que um elfo batalhe somente até que o inimigo esteja incapacitado mas nada o impede de matar um inimigo se ele considerar que a causa é nobre ou para proteger alguem que ama. A civilização élfica não costuma se relacionar bem com a civilização anã, pois há uma rivalidade tão antiga que eles nem mesmo se recordam qual a razão.
+            
+        
+        <tr>
+            <th>Felinos (Quimeras)
+            <td>Costumam variar fisicamente como leões, leopardos, panteras, pumas e onças e são eximios caçadores graças a sua furtividade e sentidos naturalmente aguçados. Quando escravos caçavam para seus senhores, que sentiam prazer na destruição da vida. Atualmente, fazem grupos diversos com no maximo algumas dezenas e gostam de viver em clareiras no meio de florestas densas. Apesar dos grupos viverem separadamente, todos tem conhecimento dos outros e se comportam como aliados.
+            
+        
+        <tr>
+            <th>Fitosapiens
+            <td>A espécie Elder Flora é constituída dos seres pensantes mais antigos deste mundo, estes seres também são conhecidos como fitosapiens ou Homens-planta. Eles tem uma longevidade desconhecida, sendo que os membros mais antigos dessa raça ja tem dezenas de milhares de anos. Nos primordios eram como plantas comuns, porém existem há tanto tempo que acabaram desenvolvendo inteligência e começaram a produzir tecnologia e cultura. Ao longo do tempo viram diversas civilizações nascerem e morrerem, aprendendo a não cometer os mesmos erros que elas e assimilando parte de sua tecnologia e conhecimento científico. Seu corpo é constituido de uma madeira mais resistente que a comum fazendo com que tenham uma espécie de armadura natural, e sua altura pode variar muito indo desde algo parecido com um humano comum até algo como os Orcs.
+            
+        
+        <tr>
+            <th>Halfling
+            <td>Sempre carismáticos e amigáveis, conseguem cativar quase todas as criaturas. Com sua baixa estatura (tendo de 0,90m até 1,20m) costumam viver em tocas construídas em bosques e fazem parte de comunidades pacificas e baseadas em agriculturas. São geralmente leais e bondosos e sua aparência lembra a de um humano, porém pequenos e com grandes pés peludos. Sua baixa estatura e corpo, geralmente, franzino faz com que seja ótimo em situações que exigem furtividade.
+            
+        
+        <tr>
+            <th>Humano
+            <td>Apesar de ser consideravelmente mais jovem que diversas outras raças, atualmente é a raça dominante no mundo e atingiu este patamar graças a sua versatilidade, podendo tanto agir diplomaticamente quanto agressivamente, alem de produzir conhecimento e tecnologia de maneira mais rapida que as outras raças. Apesar de historicamente varios guerreiros e herois terem sido humanos em sua maioria são mais fracos que as outras raças.
+            
+        
+        <tr>
+            <th>Meio-Elfo
+            <td>Híbridos de humanos e elfos, muito semelhantes aos elfos fisicamente porém por parte da sua linhagem ser humana eles possuem uma estatura média maior, indo facilmente até 1,80m e sendo mais robustos que os elfos, e por essa diferença fisica são facilmente identificados como meio-elfos, o que é um problema pois por serem mestiços são discriminados tanto pelas sociedades élficas quanto pelas humanas. Isso faz com que vivam à margem da sociedade humana e formando alianças e organizações criminosas com meio-orcs e também com humanos rejeitados pela propria sociedade.
+            
+        
+        <tr>
+            <th>Meio-Orc
+            <td>Híbridos de humanos e orcs, são mais altos que os humanos, atingindo 1,90 metros facilmente mas costumam ser menores e menos robustos que seus parentes orcs, as presas são proporcionalmente menores e a tonalidade da pele é usualmente herdada pelo parente orc. Normalmente são gerados a partir de uma relação forçada entre um orc macho e uma humana e isso faz com que sejam negados pelas duas raças pois para os humanos eles são frutos de um ato hediondo e grotesco enquanto para os orcs eles são fracos demais para participar da comunidade deles. Isso faz com que vivam à margem da sociedade humana e formando alianças e organizações criminosas com meio-elfos e também com humanos rejeitados pela propria sociedade. Diferente de seus pais, os meio-orcs tem uma inteligência de nível humano, sendo bem mais civilizados. Apesar disso eles não ficam atrás quando se trata de habilidades de combate, pois apesar de não serem tão grandes e robustos quanto seus pais eles são mais ágeis que seus parentes de sangue puro.
+            
+        
+        <tr>
+            <th>Nefling
+            <td>São extremamente raros e existem três variações de nephilim, são eles: o meio-anjo, o meio-demônio e o híbrido. O meio-anjo é um híbrido de anjo e humano, são físicamente semelhantes a humanos comuns, com estatura média e porte atletico, exceto pelo grande e belo par de asas brancas e penosas que ostentam, além disso também são muito belos e é comum que tenham olhos claros como azul, verde ou cinza. O meio- demônio, ao contrário do meio-anjo, tem muito mais características herdadas de sua linhagem sobrenatural. É possível que um meio-demônio tenha chifres, presas, pele avermelhada, asas penosas negras ou asas como de morcegos, unhas afiadas como garras e até cauda e seus olhos normalmente são vermelhos. O no caso do híbrido as características sobrenaturais herdadas de seus pais podem vir em qualquer combinação possível dois dois grupos de caracteristicas citados anteriormente. A linhagem de um nephilim não intefere de maneira alguma em seu alinhamento visto que são espíritos livres e podem escolher o caminho que desejarem.
+            
+        
+        <tr>
+            <th>Nightcrawler
+            <td>Criaturas que dormem pouco (de 2 a 3 horas por dia) e por isso conseguem viver tanto de dia quanto de noite (apesar de preferirem e serem mais adaptados ao periodo noturno), os nightcrawlers são uma espécie de demônio de aparênca humanóide e porte atlético, normalmente possui dois pares de chifres sendo um par composto por chifres mais longos e curvados e outro par por chifres mais curtos e pontiagúdos, também possúi uma calda longa e flexivel em forma de seta. Geralmente tem um alinhamento bondoso e por isso se envergonham de serem demônios, por essa razão eles costumam fugir do reino das trevas e se exilar no plano material para praticar boas ações e conseguirem sua redenção, muitos deles tem o corpo coberto de cicatrizes causadas propositalmente por eles mesmos (uma para cada boa ação praticada). Raramente vê-se grupos de mais de três, sendo ainda mais comum que andem sozinhos do que em duplas ou trios.
+            
+        
+        <tr>
+            <th>Orc
+            <td>Humanóides grandes e robustos, costumam ter entre 2 e 3 metros de altura e são muito musculosos. A cor da sua pele varia entre verde, marrom e cinza passando por diversas tonalidades. Na parte inferior da mandíbula possuem presas que podem atingir de 10 a 15 centimetros. Vivem em comunidades tribais estão sempre em conflito, tanto entre si quanto entre outras raças, pois vivem da guerra e são nômades que migram pra uma região, retiram tudo que ela pode oferecer e depois migram novamente, caso encontrem uma região prospera porém ja ocupada irão tomá-la a força, por este motivo a maioria dos orcs morre ainda na juventude, sendo raro ver um orc ancião, ainda assim os anciãos são os mais perigosos e recomenda-se que distância seja mantida, afinal para conseguir sobreviver até uma idade avaçada vivendo em meio a tantos conflitos é necessário ser um guerreiro excepcional, sagaz e muitas vezes até traiçoeiro.
+            
+        
+        <tr>
+            <th>Primatas (quimeras)
+            <td>A mais inteligente espécie de quimera e os precursores do evento que culminou na sua libertação, evento este comumente conhecido como rebelião das quimeras. Entre todas as quimeras, esta espécie é a mais amigável e que mais se sente grata aos Elder Flora. Seu físico pode variar entre três tipos, sendo um  deles semelhante ao chimpanzé, sendo o menor dos três e tendo pelagem escura, outro semelhante a orangotangos, tendo uma pelagem mais avermelhada e sendo um pouco maior que os chimpanzés e o terceiro e mais robusto, bem semelhante aos gorilas, sendo muito maior e tendo a pelagem escura. Todos os três tipos tem pêlos espalhados por quase todo o corpo e braços bem compridos. Após a rebelião das quimeras, se aliaram aos Elder Flora, se tornando seus guardas e guerreiros para que os Homens-planta pudessem deixar a guerra de lado e viver pela busca do conhecimento, mas apesar disso algumas dessas quimeras se destacam intelectualmente e acabam se tornando cientistas ao lado dos Elder Flora. Durante a escravidão eles faziam trabalhos manuais, transportavam cargas e faziam todos tipo de trabalho forçado.
+            
+        
+        <tr>
+            <th>Quimera (Felinos, aves de rapina, ruminantes, ursídios, primatas, repteis)
+            <td>Animais humanoides, criados pela ciência de uma civilização antiga e extremamente avançada, ha muito tempo extinta durante as guerras ancestrais. Foram criados em laboratorio para posteriormente serem escravizados pelos seus criadores para fazerem trabalhos que exigicem grande esforço fisico e também para travar batalhas e morrer no lugar deles. Se rebelaram e pediram auxilio aos Homens-planta para que conseguissem serem livres. Até hoje todas as espécies remanescentes são aliadas dos Elder Flora (mesmo que alguns tipos de quiméras não se considerem aliadas umas das outras ou até mesmo se considerem inimigos).
+            
+        
+        <tr>
+            <th>Répteis (Quimeras)
+            <td>São separados em duas castas que tinham funções diferentes durante a escravidão mas hoje coexistem em cidades construídas por eles mesmos em pantanos. Ambas as castas possuem uma estatura média semelhante a dos humanos, porém os crocodylia possuem um corpo mais robusto e musculoso, um rosto alongado e uma mordida feroz, já os ophidia são mais magros e esguios, produzem veneno naturalmente e costuma ter a lingua bifurcada. Durante a escravidão os crocodylia eram usados como guardas reais e os ophidia eram usados em missões de assassinato.
+            
+        
+        <tr>
+            <th>Ruminantes (Quimeras)
+            <td>Humanoides grandes e robustos com cascos no lugar dos pés e galhadas que podem se assemelhar às de renas,alces, bufalos, carneiros ou touros. São naturalmente herbívoros e por isso desenvolveram muito bem sua agricultura mas sua principal ocupação é a guerra, visto que são muito fortes e não muito espertos. Durante a escravidão, eram usados como soldados. Hoje eles coexistem com os humanos em areas rurais graças a habilidade que possuem na area agricola.
+            
+        
+        <tr>
+            <th>Ursídios (Quimeras)
+            <td>Fortes e robustos, durante a escravidão eram usados como vigias terrestres, complementando o trabalho das aves de rapina. Além disso, também eram usados como combatentes mas por serem mais inteligentes que os ruminantes era natural que tivessem cargos acima dos deles e os comandassem, esta situação traz tensão em suas relações até os dias atuas. São muito territorialistas e capturam tudo que entra em sua região, com o intuito de interrogar para posteriormente decidir o que fazer com o invasor. Para as outras raças eles parecem diferir apenas nos três tipos de pelagem, sendo elas branca, parda e negra, entretando esse tipo de colocação os ofende profundamente e os mesmos insistem que eles são muito diferentes uns dos outros, como tem um pavio muito curto, este tipo de comentário pode levar até mesmo a uma batalha. Atualmente vivem em grandes florestas ancestrais.
+
+^{widgetBootstrapLinks}

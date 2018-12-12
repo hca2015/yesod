@@ -52,14 +52,75 @@
                     <button class="btn btn-outline-secondary" type="submit">Login
                     
 <div class="jumbotron">
-  $maybe msg <- mensagem
-    <div class="alert alert-success">
-      #{msg}
-
-  <h1>
-    _{MsgWelcome}
- 
-  <button onclick="teste()" class="btn btn-primary">
-    _{MsgTest}
+    <table border="1">
+        <tr>
+            <th>Atributos
+            <th>Classes Ofensivo
+    
+        <tr>
+            <td>
+            <td>Assassino
+            <td>Combatente
+            <td>Executor
+    
+        <tr>
+            <td>Aura
+            <td align="center">1
+            <td align="center">1
+            <td align="center">1
+        
+        <tr>
+            <td>Carisma
+            <td align="center">3
+            <td align="center">3
+            <td align="center">3
+        
+        <tr>
+            <td>Constituição
+            <td align="center">3
+            <td align="center">4
+            <td align="center">6
+        
+        <tr>
+            <td>Destreza
+            <td align="center">7
+            <td align="center">5
+            <td align="center">3
+        
+        <tr>
+            <td>Fé
+            <td align="center">2
+            <td align="center">4
+            <td align="center">3
+        
+        <tr>
+            <td>Foco
+            <td align="center">6
+            <td align="center">4
+            <td align="center">4
+        
+        <tr>
+            <td>Força
+            <td align="center">3
+            <td align="center">6
+            <td align="center">8
+        
+        <tr>
+            <td>Iteligência
+            <td align="center">5
+            <td align="center">4
+            <td align="center">3
+        
+        <tr>
+            <td>percepção
+            <td align="center">5
+            <td align="center">4
+            <td align="center">4
+        
+        <tr>
+            <td>Sorte
+            <td align="center">1d6
+            <td align="center">1d6
+            <td align="center">1d6
 
 ^{widgetBootstrapLinks}

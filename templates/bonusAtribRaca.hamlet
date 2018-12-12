@@ -1,0 +1,302 @@
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        
+        <span class="navbar-brand">A Taverna Gamble
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href=@{HomeR}>
+                        Página Inicial
+                        
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Atributos
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href=@{AtributosR}>Todos Atributos 
+                        <a class="dropdown-item" href=@{BonusR}>Bônus de Atributos por Raça
+                        <a class="dropdown-item" href=@{EspecialistaR}>Classe Especialista
+                        <a class="dropdown-item" href=@{OfensivoR}>Classe Ofensivo
+                        <a class="dropdown-item" href=@{SuporteR}>Classe Suporte
+                        <a class="dropdown-item" href=@{TanqueR}>Classe Tanque
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=@{RacasR}>
+                        Raças
+                        
+                <li class="nav-item">
+                    <a class="nav-link" href=@{ClassesR}>
+                        Classes
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=@{PainelR}>
+                        Sugestões
+                        
+            $maybe _ <- admin
+                <form class="form-inline my-2 my-lg-0" action=@{AdminR} id="painel_adm" method="get">
+                    <button class="btn btn-sm btn-outline-danger" type="submit">Painel do Admin
+                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                    <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+            $nothing
+              $maybe _ <- logado
+                <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                  <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+              $nothing
+                <form class="form-inline my-2 my-lg-0" action=@{PlayerR} method="get" id="signin">
+                    <button class="btn btn-outline-success" type="submit">Cadatre-se
+                         
+                <form class="form-inline my-2 my-lg-0" action=@{LoginR} method="get">
+                    <button class="btn btn-outline-secondary" type="submit">Login
+                    
+<div class="jumbotron">
+    <table border="1">
+        <tr>
+            <th>Atributos
+            <th>Raça
+        
+        
+        <tr>
+            <td>
+            <td>Anões
+            <td>Atlantianos
+            <td>Draconatas
+            <td>Elfos
+            <td>Fitosapiens
+            <td>Halflings
+            <td>Humanos
+            <td>Meio-Elfos
+            <td>Meio-Orcs
+            <td>Neflings
+            <td>Nightcrawlers
+            <td>Orcs
+            <td>Quimeras (Aves de Rapina)
+            <td>Quimeras (Felinos)
+            <td>Quimeras (Primatas)
+            <td>Quimeras (Répteis)
+            <td>Quimeras (Ruminantes)
+            <td>Quimeras (Ursídios)
+        
+        
+        <tr>
+            <td>Aura
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">*
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+2
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+        
+        
+        <tr>
+            <td>Carisma
+            <td align="center">-1
+            <td align="center">/
+            <td align="center">-2
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">*
+            <td align="center">-2
+            <td align="center">-2
+            <td align="center">-2
+            <td align="center">-1
+            <td align="center">-1
+            <td align="center">-2
+            <td align="center">-2
+            <td align="center">-2
+            <td align="center">-2
+            <td align="center">-2
+            <td align="center">-2
+        
+        
+        <tr>
+            <td>Constituição
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">-1
+            <td align="center">*
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+2
+            <td align="center">+2
+        
+        
+        <tr>
+            <td>Destreza
+            <td align="center">-1
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+2
+            <td align="center">*
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">-1
+            <td align="center">+2
+            <td align="center">+2
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">/
+        
+        
+        <tr>
+            <td>Fé
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">-1
+            <td align="center">/
+            <td align="center">*
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">-1
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+        
+        
+        <tr>
+            <td>Foco
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+2
+            <td align="center">/
+            <td align="center">/
+            <td align="center">*
+            <td align="center">+2
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+2
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">/
+        
+        
+        <tr>
+            <td>Força
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">/
+            <td align="center">-1
+            <td align="center">*
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+2
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+2
+            <td align="center">+2
+        
+        
+        <tr>
+            <td>Inteligência
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">*
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">-1
+            <td align="center">/
+        
+        
+        <tr>
+            <td>Percepção
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">*
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+            <td align="center">+1
+        
+        
+        <tr>
+            <td>Sorte
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">+1
+            <td align="center">*
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+            <td align="center">/
+        
+^{widgetBootstrapLinks}

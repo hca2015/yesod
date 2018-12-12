@@ -1,19 +1,69 @@
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        
+        <span class="navbar-brand">A Taverna Gamble
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href=@{HomeR}>
+                        Página Inicial
+                        
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Atributos
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href=@{AtributosR}>Todos Atributos 
+                        <a class="dropdown-item" href=@{BonusR}>Bônus de Atributos por Raça
+                        <a class="dropdown-item" href=@{EspecialistaR}>Classe Especialista
+                        <a class="dropdown-item" href=@{OfensivoR}>Classe Ofensivo
+                        <a class="dropdown-item" href=@{SuporteR}>Classe Suporte
+                        <a class="dropdown-item" href=@{TanqueR}>Classe Tanque
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=@{RacasR}>
+                        Raças
+                        
+                <li class="nav-item">
+                    <a class="nav-link" href=@{ClassesR}>
+                        Classes
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=@{PainelR}>
+                        Sugestões
+                        
+            <form class="form-inline my-2 my-lg-0" action=@{AdminR} id="painel_adm" method="get">
+                <button class="btn btn-sm btn-outline-danger" type="submit">Painel do Admin
+            <form class="form-inline my-2 my-lg-0" action=@{LogoutR} method="post">
+                <button class="btn btn-sm btn-outline-secondary" type="submit">Logout
+
+<div class="jumbotron">
     <table class="table">
-               <thead>
-                    <tr>
-                        <th>
-                            NOME
-                        <th>
-                            E-MAIL
-                        <th>
-                            Apagar?
-                <tbody>
-                    $forall (Entity usrid usuario) <- usuarios
-                        <tr>
-                            <td>
-                                #{usuarioNome usuario}
-                            <td>
-                                #{usuarioEmail usuario}
-                            <td>
-                                <form action=@{ApagarR usrid} method=post>
-                                    <input type="submit" value="X">
+       <thead>
+            <tr>
+                <th>
+                    ID
+                <th>
+                    NOME
+                <th>
+                    E-MAIL
+                <th>
+                    DELETAR
+        <tbody>
+            $forall (Entity plaid player) <- players
+                <tr>
+                    <td>
+                        #{fromSqlKey plaid}
+                    <td>
+                        #{playerNome player}
+                    <td>
+                        #{playerEmail player}
+                    <td>
+                        <form action=@{ApagarR plaid} method="post">
+                            <button class="btn-primary" type="submit">
+                                X
+
+^{widgetBootstrapLinks}
