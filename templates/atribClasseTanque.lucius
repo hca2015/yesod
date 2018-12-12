@@ -1,7 +1,3 @@
-h1{
-    color:blue;
-}
-
 .jumbotron {
   margin-top: 25px;
 }

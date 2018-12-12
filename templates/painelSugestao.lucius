@@ -1,0 +1,18 @@
+.jumbotron {
+  margin-top: 25px;
+}
+
+#signin {
+  margin-right: 5px;
+}
+
+.card-header,
+.card-title,
+.card-text{
+  color: black;
+}
+
+#signin,
+#painel_adm {
+  margin-right: 5px;
+}

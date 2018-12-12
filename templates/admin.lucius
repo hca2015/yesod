@@ -6,7 +6,6 @@ h1{
   margin-top: 25px;
 }
 
-#signin,
 #painel_adm {
   margin-right: 5px;
 }
